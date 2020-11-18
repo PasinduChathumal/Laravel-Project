@@ -25,8 +25,15 @@ Route::get('/admin pannel', function () {
 });
 
 Route::post('/files','DocumentController@store');
-Route::get('/admin_pannel', 'DocumentController@index'
-//$data=>App\Documents::all();
-//return view('admin_pannel')->with ('files',$data);
-);
+Route::get('/files','DocumentController@index');
+Route::get('/files/{id}','DocumentController@show');
+
+
+
+/*Route::get('/admin_pannel', 'DocumentController@index'
+$data=>App\Documents::all();
+return view('admin_pannel')->with ('files',$data);
+);*/
+
+
 

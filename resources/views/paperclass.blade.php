@@ -16,9 +16,14 @@
 					</ul>
 				</div>
 			</div>
-			<br><br> 
-                   
-			<br><br>	
+			<br>
+			<h1>{{$data->title}}</h1><br><br>
+        	<h1>{{$data->description}}</h1><br><br>
+        	<p>
+            <iframe src="{{url('storage/'.$data->file)}}" style="width: 600px; 
+            height: 500px "></iframe>
+        	</p> 
+            <br>	
 			</div>
 			<div id="footer">Copyright © Niru Developer </footer>
 		</div>

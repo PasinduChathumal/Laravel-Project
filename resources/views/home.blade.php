@@ -26,7 +26,7 @@
 				<div id="main-menu">
 					<ul>
 					  <li>
-						<a href="kandy.html">
+						<a href= return view('paperclass.blade.php)>
 							<img class="menu-img" src="/img/pepar.jpg" alt="Kandy">
 							<div class="desc">Paper class</div>
 						</a>

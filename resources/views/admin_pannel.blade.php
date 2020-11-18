@@ -15,22 +15,5 @@
         <input type = "file" name = "file">
         <input type = "submit" value = "Submit">
     </form><br><br>
-<h1> View Your Downloads Below :- </h1>
-    <table border="2">
-        <tr>
-        <th>Index</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>View</th>
-        </tr>
-        @foreach($files as $data)
-        <tr>
-            <td>{{$data->Id}}</td>
-            <td>{{$data->title}}</td>
-            <td>{{$data->description}}</td>
-            <td> <a href="/files/{{$data->id}}">View</a> </td>
-        </tr>
-        @endforeach    
-    </table>    
 </body>
 </html>

@@ -14,9 +14,8 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        $data = new Documents;
-        $data= Documents::all();
-        return view('admin_pannel')->with ('files',$data);
+        $file= Documents::all();
+        return view('view',compact('file'));
     }
     /**
      * Show the form for creating a new resource.
@@ -40,7 +39,7 @@ class DocumentController extends Controller
         if($request->file('file')){
             $file=$request->file;
             $filename=time().'.'.$file->getClientOriginalExtension();
-            $request->file->move('storage/'.$filename);
+            $request->file->move('storage/',$filename);
             $data->file=$filename;
         }
         $data->title=$request->title;
@@ -57,7 +56,8 @@ class DocumentController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Documents::find($id);
+        return view('paperclass',compact('data'));
     }
 
     /**
